@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Pink Website</title>
+</head>
+<body>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe4e1; /* Pink background */
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 24px;
+    color: #ff69b4; /* Pink text */
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    background-color: #ff69b4;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1493; /* Darker pink on hover */
+    transform: scale(1.1); /* Enlarge on hover */
+}
+
+
+    </style>
+
+    <div class="container">
+        <h1 class="question">Apakah kamu sedang fall in love with another man?</h1>
+        <div class="buttons">
+            <a href="question4/index.html"><button>Tidak</button></a>
+            <a href="endQuest/index.html"><button>Iya</button></a>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('yesBtn').addEventListener('click', function() {
+    alert('Terima kasih!');
+});
+
+document.getElementById('noBtn').addEventListener('click', function() {
+    const button = this;
+    button.style.position = 'absolute';
+    button.style.top = `${Math.random() * 80}vh`;
+    button.style.left = `${Math.random() * 80}vw`;
+});
+
+    </script>
+</body>
+</html>
